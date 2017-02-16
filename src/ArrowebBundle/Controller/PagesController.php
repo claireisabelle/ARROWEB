@@ -15,4 +15,12 @@ class PagesController extends Controller
     {
         return $this->render('ArrowebBundle:pages:index.html.twig');
     }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction()
+    {
+        return $this->render('ArrowebBundle:pages:index.html.twig');
+    }
 }
