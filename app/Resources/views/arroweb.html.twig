@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+
+        <!-- Block Title -->
+        <title>Arroweb - {% block title %}{% endblock %}</title>
+        
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -18,9 +22,8 @@
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}" />
 
-        <!-- Block Title -->
-        <title>Pouet ! {% block title %}{% endblock %}</title>
-
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/7798b6d3d8.js"></script>
        
     </head>
     <body>
@@ -42,11 +45,11 @@
                       <a class="nav-link {% if app.request.get('_route') == 'homepage' %} active {% endif %}" href="{{ path('homepage') }}">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle {% if app.request.get('_route')  starts with 'prestation' %} active {% endif %}" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Prestations
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Site Internet sur Mesure</a>
+                    <a class="dropdown-item" href="{{ path('prestation_site_mesure') }}">Site Internet sur Mesure</a>
                     <a class="dropdown-item" href="#">Site Wordpress</a>
                     <a class="dropdown-item" href="#">Refonte Web</a>
                     <a class="dropdown-item" href="#">Maintenance &amp; Actualisation</a>
@@ -72,11 +75,9 @@
           </div><!-- /.collapse navbar-collapse -->
         </nav><!-- /.nav -->
 
-        <div class="container-fluid bandeau1">
-            <div class="container">
-                {% block bandeau1 %}{% endblock %}
-            </div><!-- /.container -->
-        </div> <!-- /.container-fluid bandeau1 --> 
+        
+        {% block bandeau1 %}{% endblock %}
+        
 
         <div class="container-fluid bandeau2">
             <div class="container">

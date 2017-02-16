@@ -2,6 +2,7 @@
 body{ 
 	padding-top: 58px; 
 	background-color: #061748;
+
 }
 
 p{
@@ -10,7 +11,7 @@ p{
 
 h1{
 	font-family: 'Roboto Condensed', sans-serif !important;
-	font-size: 1.9em !important;
+	font-size: 2.5em !important;
 	color: rgba(0,0,0,0.8);
 	padding-top: 25px;
 }
@@ -59,6 +60,40 @@ h1{
 	opacity: 0;
 }
 
+/* CONTAINER FLUID */
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  }
+}
+
 
 /* MENU */
 .fond-bleu{
@@ -83,8 +118,6 @@ a.nav-link{
 /* BANDEAU 1 HEADER*/
 .bandeau1{
 	background-color: #ffffff;
-	margin-left:-20px;
-	margin-right:-20px;
 }
 
 .intro{
@@ -100,16 +133,55 @@ a.nav-link{
 	font-size: 1.2rem;
 }
 
+ .showcase{
+   height:400px;
+   text-align: center;
+   color:#fff;
+   background:url('../img/site-internet-sur-mesure-lg.jpg') no-repeat top center;
+   position: relative;
+ }
+
+ .showcase h3{
+   font-family: 'Roboto Condensed', sans-serif !important;
+   font-size: 3.2rem;
+   padding-top: 8%;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-bottom:10px;
+   color:#fff;
+   text-shadow: 1px 1px 3px #000000;
+ }
+
+ .showcase p {
+   font-size:2rem;
+   text-shadow: 1px 1px 3px #000000;
+ }
+
+ .layer{
+ 	position: absolute;
+ 	background-color: rgba(80,80,80,0.75);
+ 	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+
 /* BANDEAU 2 */
 .bandeau2{
 	background-color: #f6f3f6;
-	margin-left:-20px;
-	margin-right:-20px;
 	margin-top: -20px;
 }
 
 .bandeau2 .logo{
 	padding-bottom: 15px;
+}
+
+.bandeau2 h2{
+	font-family: 'Roboto Condensed', sans-serif !important;
+	font-size: 1.8em !important;
+	color: rgba(0,0,0,0.75);
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 
 /* FOOTER */

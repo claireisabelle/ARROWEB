@@ -1,24 +1,28 @@
 {% extends 'arroweb.html.twig' %}
 
-{% block title %}LEs gens{% endblock %}
+{% block title %}Création de site Internet à Caen, Normandie{% endblock %}
 
 {% block bandeau1 %}
-	<div class="row">
-		<div class="col-12 col-md-4"> 
-			<img src="{{ asset('img/site-internet-neophite.png') }}" class="img-fluid" alt="Créer un site Internet quand on y connaît rien" title="" />
-		</div><!-- /.col -->
+	<div class="container-fluid bandeau1">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-4"> 
+					<img src="{{ asset('img/site-internet-neophite.png') }}" class="img-fluid align-middle" alt="Créer un site Internet quand on y connaît rien" title="" />
+				</div><!-- /.col -->
 
-		<div class="col-12 col-sm-10 col-md-8">
-			<p class="intro">Vous avez besoin d'un site Internet ?<br />
-			Mais vous n'y <strong>connaissez rien du tout</strong> ?<br />
-			Pas de soucis, suivez-moi !<br />
-			<img src="{{ asset('img/avion.png') }}" class="img-fluid anim1" alt="" title="" /></p>
+				<div class="col-12 col-sm-10 col-md-8">
+					<p class="intro">Vous avez besoin d'un site Internet ?<br />
+					Mais vous n'y <strong>connaissez rien du tout</strong> ?<br />
+					Pas de soucis, suivez-moi !<br />
+					<img src="{{ asset('img/avion.png') }}" class="img-fluid anim1" alt="" title="" /></p>
 
-			<p class="intro2 text-right">Pour la création de votre site, je vous explique tout par ici :
-			<a href="#" class="btn btn-primary">Votre site Internet sur mesure</a>
-			</p>
-		</div><!-- /.col -->
-	</div><!-- /.row -->
+					<p class="intro2 text-right">Pour la création de votre site, je vous explique tout par ici :
+					<a href="#" class="btn btn-primary">Votre site Internet sur mesure</a>
+					</p>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</div> <!-- /.container-fluid bandeau1 --> 
 {% endblock %}
 
 {% block bandeau2 %}
