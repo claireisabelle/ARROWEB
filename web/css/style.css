@@ -1,0 +1,139 @@
+/* GENERALITES */
+body{ 
+	padding-top: 58px; 
+	background-color: #061748;
+}
+
+p{
+	padding-bottom: 10px;
+}
+
+h1{
+	font-family: 'Roboto Condensed', sans-serif !important;
+	font-size: 1.9em !important;
+	color: rgba(0,0,0,0.8);
+	padding-top: 25px;
+}
+
+.anim1 {
+    opacity:0;
+    margin-left: -500px;
+    -moz-animation: anim 1s linear forwards 1s;
+    -webkit-animation: anim 1s linear forwards 1s;
+    -o-animation: anim 1s linear forwards 1s;
+    -ms-animation: anim 1s linear forwards 1s;
+    animation: anim 1s linear forwards 1s;
+}
+@-moz-keyframes anim {
+   0%  {opacity:0;margin-left: -500px;}
+   100% {opacity:1;margin-left: 0px;}
+}
+@-webkit-keyframes anim {
+   0%  {opacity:0;margin-left: -500px;}
+   100% {opacity:1;margin-left: 0px;}
+}
+@-o-keyframes anim {
+   0%  {opacity:0;margin-left: -500px;}
+   100% {opacity:1;margin-left: 0px;}
+}
+@-ms-keyframes anim {
+   0%  {opacity:0;margin-left: -500px;}
+   100% {opacity:1;margin-left: 0px;}
+}
+@keyframes anim {
+   0%  {opacity:0;margin-left: -500px;}
+   100% {opacity:1;margin-left: 0px;}
+}
+
+.card{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.btn-warning {
+  background-color: #ef4836 !important;
+  border-color: #ef4836 !important;
+}
+
+.firstStar{
+	opacity: 0;
+}
+
+
+/* MENU */
+.fond-bleu{
+	background-color: #02569C;
+}
+
+a.nav-link{
+	color: #ffffff !important;
+}
+
+.nav-link.active{
+	color: #ffffff !important;
+	font-style: italic !important;
+	font-weight: bold !important;
+}
+
+.nav-link:hover {
+  	color: #D3DAF1 !important;
+}
+
+
+/* BANDEAU 1 HEADER*/
+.bandeau1{
+	background-color: #ffffff;
+	margin-left:-20px;
+	margin-right:-20px;
+}
+
+.intro{
+	font-family: 'Kalam', cursive;
+	padding-top: 20px;
+	font-size: 1.5rem;
+}
+
+.intro2{
+	font-family: 'Kalam', cursive;
+	padding-top: 0px !important;
+	margin-top: -20px !important;
+	font-size: 1.2rem;
+}
+
+/* BANDEAU 2 */
+.bandeau2{
+	background-color: #f6f3f6;
+	margin-left:-20px;
+	margin-right:-20px;
+	margin-top: -20px;
+}
+
+.bandeau2 .logo{
+	padding-bottom: 15px;
+}
+
+/* FOOTER */
+
+.footer{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 0.9rem;
+}
+
+.footer ul{
+	list-style-type: square !important;
+	color: rgba(255,255,255, 0.7) ;
+}
+
+.footer li a{
+	color: rgba(255,255,255, 0.7) !important;
+}
+
+.footer li a:hover{
+	color: rgba(255,255,255, 1) !important;
+	text-decoration: none !important;
+}
+
+.footer p{
+	color: rgba(255,255,255, 0.7) !important;
+}

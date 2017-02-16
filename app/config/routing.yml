@@ -1,3 +1,5 @@
-app:
-    resource: "@AppBundle/Controller/"
+arroweb:
+    resource: "@ArrowebBundle/Controller/"
     type:     annotation
+    prefix:   /
+

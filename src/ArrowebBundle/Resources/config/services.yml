@@ -1,0 +1,4 @@
+services:
+#    arroweb.example:
+#        class: ArrowebBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
