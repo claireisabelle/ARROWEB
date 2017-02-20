@@ -16,4 +16,20 @@ class PrestationsController extends Controller
         return $this->render('ArrowebBundle:prestations:site-sur-mesure.html.twig');
     }
 
+    /**
+     * @Route("/prestations/site-internet-wordpress", name="prestation_site_wordpress")
+     */
+    public function worpdressAction()
+    {
+        return $this->render('ArrowebBundle:prestations:site-wordpress.html.twig');
+    }
+
+    /**
+     * @Route("/prestations/refonte-site-internet", name="prestation_refonte_site")
+     */
+    public function refonteAction()
+    {
+        return $this->render('ArrowebBundle:prestations:refonte-site-internet.html.twig');
+    }
+
 }

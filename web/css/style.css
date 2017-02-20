@@ -137,7 +137,6 @@ a.nav-link{
    height:400px;
    text-align: center;
    color:#fff;
-   background:url('../img/site-internet-sur-mesure-lg.jpg') no-repeat top center;
    position: relative;
  }
 
@@ -166,6 +165,18 @@ a.nav-link{
     height: 100%;
  }
 
+ .presta-picture1{
+ 	background:url('../img/site-internet-sur-mesure-lg.jpg') no-repeat top center;
+ }
+
+.presta-picture2{
+ 	background:url('../img/site-internet-wordpress-lg.jpg') no-repeat top center;
+ }
+
+ /* /.BANDEAU 1 */
+
+
+
 /* BANDEAU 2 */
 .bandeau2{
 	background-color: #f6f3f6;
@@ -182,6 +193,11 @@ a.nav-link{
 	color: rgba(0,0,0,0.75);
 	padding-top: 15px;
 	padding-bottom: 10px;
+}
+
+.bandeau2 .chapeau{
+	font-size: 1.2em !important;
+	color: rgba(0,0,0,0.55) !important;
 }
 
 /* FOOTER */
