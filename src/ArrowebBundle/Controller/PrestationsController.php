@@ -32,4 +32,20 @@ class PrestationsController extends Controller
         return $this->render('ArrowebBundle:prestations:refonte-site-internet.html.twig');
     }
 
+    /**
+     * @Route("/prestations/maintenance-site-internet", name="prestation_maintenance")
+     */
+    public function maintenanceAction()
+    {
+        return $this->render('ArrowebBundle:prestations:maintenance-site-internet.html.twig');
+    }
+
+    /**
+     * @Route("/prestations/integration-site-internet", name="prestation_integration")
+     */
+    public function integrationAction()
+    {
+        return $this->render('ArrowebBundle:prestations:integration-site-internet.html.twig');
+    }
+
 }

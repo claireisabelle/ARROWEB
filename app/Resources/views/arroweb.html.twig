@@ -36,7 +36,7 @@
               <span class="navbar-toggler-icon"></span>
               </button>
               
-              <a class="navbar-brand" href="#"><img src="{{ asset('img/logo-blanc-2.png') }}" alt="Arroweb, conception de site Internet" title="" /></a>
+              <a class="navbar-brand" href="{{ path('homepage') }}"><img src="{{ asset('img/logo-blanc-2.png') }}" alt="Arroweb, conception de site Internet" title="" /></a>
 
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <div class="container">
@@ -45,15 +45,15 @@
                       <a class="nav-link {% if app.request.get('_route') == 'homepage' %} active {% endif %}" href="{{ path('homepage') }}">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle {% if app.request.get('_route')  starts with 'prestation' %} active {% endif %}" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle {% if app.request.get('_route')  starts with 'prestation' %} active {% endif %}" href="{{ path('prestation_site_mesure') }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Prestations
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{ path('prestation_site_mesure') }}">Site Internet sur Mesure</a>
                     <a class="dropdown-item" href="{{ path('prestation_site_wordpress') }}">Site Wordpress</a>
                     <a class="dropdown-item" href="{{ path('prestation_refonte_site') }}">Refonte Web</a>
-                    <a class="dropdown-item" href="#">Maintenance &amp; Actualisation</a>
-                    <a class="dropdown-item" href="#">Intégration Web</a>
+                    <a class="dropdown-item" href="{{ path('prestation_maintenance') }}">Maintenance &amp; Actualisation</a>
+                    <a class="dropdown-item" href="{{ path('prestation_integration') }}">Intégration Web</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Web &amp; Sport</a>
                   </div>
@@ -92,7 +92,7 @@
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <ul>
-                            <li><a href="">Accueil</a></li>
+                            <li><a href="{{ path('homepage') }}">Accueil</a></li>
                             <li><a href="">Portfolio</a></li>
                             <li><a href="">Questions</a></li>
                             <li><a href="">A propos</a></li>
@@ -102,11 +102,11 @@
                     </div><!-- /.col -->
                     <div class="col-12 col-md-4">
                         <ul>
-                            <li><a href="">Site Internet sur mesure</a></li>
-                            <li><a href="">Site Internet Wordpress</a></li>
-                            <li><a href="">Refonte web</a></li>
-                            <li><a href="">Maintenance et actualisation</a></li>
-                            <li><a href="">Intégration web</a></li>
+                            <li><a href="{{ path('prestation_site_mesure') }}">Site Internet sur mesure</a></li>
+                            <li><a href="{{ path('prestation_site_wordpress') }}">Site Internet Wordpress</a></li>
+                            <li><a href="{{ path('prestation_refonte_site') }}">Refonte web</a></li>
+                            <li><a href="{{ path('prestation_maintenance') }}">Maintenance et actualisation</a></li>
+                            <li><a href="{{ path('prestation_integration') }}">Intégration web</a></li>
                             <li><a href="">Web et Sport</a></li>
                         </ul>
                     </div><!-- /.col -->
