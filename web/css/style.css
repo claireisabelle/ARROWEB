@@ -1,4 +1,16 @@
-/* GENERALITES */
+/* 
+ * Généralités
+ * Container Fluid 
+ * Menu
+ * Bandeau 1 (header)
+ * Bandeau 2 (contenu)
+ * Footer
+ */
+
+
+/* 
+ * GENERALITES 
+ */
 body{ 
 	padding-top: 58px; 
 	background-color: #061748;
@@ -60,7 +72,9 @@ h1{
 	opacity: 0;
 }
 
-/* CONTAINER FLUID */
+/* 
+ * CONTAINER FLUID (suppression des marges)
+ */
 .container-fluid {
   padding-right: 0px !important;
   padding-left: 0px !important;
@@ -95,7 +109,9 @@ h1{
 }
 
 
-/* MENU */
+/* 
+ * MENU
+ */
 .fond-bleu{
 	background-color: #02569C;
 }
@@ -115,7 +131,9 @@ a.nav-link{
 }
 
 
-/* BANDEAU 1 HEADER*/
+/* 
+ * BANDEAU 1 (header)
+ */
 .bandeau1{
 	background-color: #ffffff;
 }
@@ -199,11 +217,20 @@ a.nav-link{
   background:url('../img/maintenance-site-internet-lg.jpg') no-repeat top center;
 }
 
+.presta-picture5{
+  background:url('../img/integration-web-lg.jpg') no-repeat top center;
+}
+
+.presta-picture6{
+  background:url('../img/site-internet-sport-lg.jpg') no-repeat top center;
+}
  /* /.BANDEAU 1 */
 
 
 
-/* BANDEAU 2 */
+/* 
+ * BANDEAU 2 (contenu)
+ */
 .bandeau2{
 	background-color: #f6f3f6;
 	margin-top: -20px;
@@ -226,7 +253,9 @@ a.nav-link{
 	color: rgba(0,0,0,0.55) !important;
 }
 
-/* FOOTER */
+/* 
+ * FOOTER 
+ */
 
 .footer{
 	margin-top: 30px;

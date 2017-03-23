@@ -48,4 +48,11 @@ class PrestationsController extends Controller
         return $this->render('ArrowebBundle:prestations:integration-site-internet.html.twig');
     }
 
+    /**
+     * @Route("/prestations/site-internet-sport", name="prestation_sport")
+     */
+    public function sportAction()
+    {
+        return $this->render('ArrowebBundle:prestations:site-internet-sport.html.twig');
+    }
 }
