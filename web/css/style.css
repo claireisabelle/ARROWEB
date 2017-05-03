@@ -287,6 +287,10 @@ a.nav-link{
 	color: rgba(0,0,0,0.55) !important;
 }
 
+.portfolio{
+  padding-top: 40px;
+}
+
 
 
 
@@ -318,4 +322,23 @@ a.nav-link{
 
 .footer p{
 	color: rgba(255,255,255, 0.7) !important;
+}
+
+
+
+
+/*
+ *
+ *
+ * 7 - PORTFOLIO
+ *
+ */
+
+ .portfolio{
+
+ }
+
+ .portfolio .card {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
 }

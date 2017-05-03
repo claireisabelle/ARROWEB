@@ -24,6 +24,12 @@
 
         <!-- Font Awesome -->
         <script src="https://use.fontawesome.com/7798b6d3d8.js"></script>
+
+        <!-- ScrollReveal -->
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script>
+         window.sr = ScrollReveal();
+        </script>
        
     </head>
     <body>
@@ -59,7 +65,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Portfolio</a>
+                  <a class="nav-link" href="{{ path('portfolio') }}">Portfolio</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Questions</a>
@@ -93,7 +99,7 @@
                     <div class="col-12 col-md-4">
                         <ul>
                             <li><a href="{{ path('homepage') }}">Accueil</a></li>
-                            <li><a href="">Portfolio</a></li>
+                            <li><a href="{{ path('portfolio') }}">Portfolio</a></li>
                             <li><a href="">Questions</a></li>
                             <li><a href="">A propos</a></li>
                             <li><a href="">Contact</a></li>
@@ -130,5 +136,16 @@
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+
+        <script>
+            sr.reveal('.element-gauche',{
+                duration: 1500,
+                origin: 'left',
+                distance: '300px',
+                viewFactor: 0.2
+            });
+
+        </script>
     </body>
 </html>
