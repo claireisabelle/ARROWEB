@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 use ArrowebBundle\Entity\Reference;
+use ArrowebBundle\Form\ReferenceType;
 
 
 class PortfolioController extends Controller
@@ -40,23 +41,24 @@ class PortfolioController extends Controller
     {
         
         $reference = new Reference();
-        $reference->setTitre('Le Trail de lAngoisse');
-        $reference->setDescription('Le site Internet officile de Hélène');
-        $reference->setStatut('En ligne');
-        $reference->setUrl('www.traildelangoisse.com');
-        $reference->setAnnee('2016');
+        // Appel du formulaire depuis le constructeur dans Form/ReferenceType.php
+        $form = $this->get('form.factory')->create(ReferenceType::class, $reference);
 
-        // Récupération de l'Entity Manager
-        $em = $this->getDoctrine()->getManager();
+        if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($reference);
+            $em->flush();
 
-        // Persistement de la Référence
-        $em->persist($reference);
-        $em->flush();
+            $request->getSession()->getFlashBag()->add('success', 'La référence a bien été ajoutée.');
 
+            return $this->redirectToRoute('dashboard');
+        }
 
-        $request->getSession()->getFlashBag()->add('success', 'La référence a bien été ajoutée.');
+        // Si le formulaire n'a pas été posté, on affiche la page du formulaire pour pouvoir le poster
+        return $this->render('ArrowebBundle:portfolio:ajouter.html.twig', array('form' => $form->createView(),
+        ));
 
-        return $this->redirectToRoute('dashboard');
     }
 
 
