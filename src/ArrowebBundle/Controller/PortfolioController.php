@@ -8,8 +8,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 use ArrowebBundle\Entity\Reference;
+use ArrowebBundle\Entity\Image;
 use ArrowebBundle\Form\ReferenceType;
-
+use ArrowebBundle\Form\ImageType;
 
 class PortfolioController extends Controller
 {
@@ -47,6 +48,7 @@ class PortfolioController extends Controller
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
         {
             $em = $this->getDoctrine()->getManager();
+            $em->persist($reference->getThumbnail());
             $em->persist($reference);
             $em->flush();
 
@@ -61,7 +63,67 @@ class PortfolioController extends Controller
 
     }
 
+    /**
+     * @Route("/gestion/supprimer/{id}", name="supprimer-reference", requirements={"id": "\d+"})
+     */
+    public function supprimerAction(Request $request, $id)
+    {
+        
+        $em = $this->getDoctrine()->getManager();
 
+        $reference = $em->getRepository('ArrowebBundle:Reference')->find($id);
+
+        if(!$reference)
+        {
+            throw $this->createNotFoundException('La référence n° '.$id.' est inconnue.');
+        }
+
+        $form = $this->createFormBuilder()->getForm();
+
+        if($form->handleRequest($request)->isValid())
+        {
+            $em->remove($reference);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('success', 'La référence a bien été supprimée.');
+            return $this->redirectToRoute('dashboard');
+        }
+
+        return $this->render('ArrowebBundle:portfolio:supprimer.html.twig', array('reference' => $reference, 'form' => $form->createView()));
+
+    }
+
+    /**
+     * @Route("/gestion/editer/{id}", name="editer-reference", requirements={"id": "\d+"})
+     */
+    public function editerAction(Request $request, $id)
+    {
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $reference = $em->getRepository('ArrowebBundle:Reference')->find($id);
+
+        if(!$reference)
+        {
+            throw $this->createNotFoundException('La référence n° '.$id.' est inconnue.');
+        }
+
+        $form = $this->createForm(ReferenceType::class, $reference);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('success', 'La référence a bien été mise à jour.');
+
+            return $this->redirectToRoute('dashboard');
+        }
+
+        return $this->render('ArrowebBundle:portfolio:editer.html.twig', array('form' => $form->createView()));
+
+    }
 
 
 }

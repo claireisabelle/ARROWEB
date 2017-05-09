@@ -9,6 +9,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+
+
 
 class ReferenceType extends AbstractType
 {
@@ -20,10 +24,17 @@ class ReferenceType extends AbstractType
         $builder
         ->add('titre', TextType::class)
         ->add('description', TextareaType::class)
-        ->add('statut', TextType::class)
+        ->add('statut', ChoiceType::class, array(
+                'choices' => array('En ligne' => 'En ligne', 'Hors ligne' => 'Hors ligne'),
+                'expanded' => true,
+                'multiple' => false
+                ))
         ->add('url', TextType::class)
         ->add('annee', TextType::class)
-        ->add('save', SubmitType::class);
+        ->add ('thumbnail', ThumbnailType::class)
+        ->add('save', SubmitType::class, array('label' => 'Valider')
+        );
+
     }
     
     /**

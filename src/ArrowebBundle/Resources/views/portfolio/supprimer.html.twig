@@ -1,0 +1,31 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Supprimer une référence{% endblock %}
+
+{% block contenu %}
+
+	<h1>Supprimer une référence</h1>
+
+	<div class="alert alert-danger">
+		
+		<p><i class="fa fa-exclamation-triangle fa-lg"></i> Souhaitez-vous vraiment supprimer la référence "{{ reference.titre }}" ?
+		</p>
+
+		<form method="post" action="{{ path('supprimer-reference', {'id': reference.id}) }}">
+
+		<a href="{{ path('dashboard') }}" class="btn">Annuler</a>
+
+		<input type="submit" class="btn btn-danger" value="Supprimer la référence" />
+
+		{{ form_rest(form) }}
+
+		</form>
+
+	</div>
+
+
+{% endblock %}
+
+
+
+

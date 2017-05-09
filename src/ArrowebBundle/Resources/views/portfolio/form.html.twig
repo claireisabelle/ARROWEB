@@ -1,0 +1,51 @@
+	{{ form_start(form) }}
+
+
+		{{ form_errors(form) }}
+
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="form-group">
+					{{ form_label(form.titre, "Titre", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					{{ form_label(form.description, "Description", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					<div class="radio">
+						{{ form_label(form.statut, "Statut", {'label_attr': {'class': 'radio-inline'}}) }}
+		      			{{ form_widget(form.statut, {'attr': {'class': 'radio-inline'}}) }}
+	      			</div><!-- /.radio -->
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					{{ form_label(form.url, "URL", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.url, {'attr': {'class': 'form-control'}}) }}
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					{{ form_label(form.annee, "Année", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.annee, {'attr': {'class': 'form-control'}}) }}
+				</div><!-- /.form-group -->
+
+				
+
+				{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+			</div><!-- /.col -->
+
+		</div><!-- /.row -->
+		
+
+		{{ form_rest(form) }}
+
+
+	{{ form_end(form) }}
+
+
+
+
