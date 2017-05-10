@@ -77,3 +77,17 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
+
+# Vich Uploader
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        product_image: 
+            uri_prefix: /img/portfolio/ 
+            upload_destination: '%kernel.root_dir%/../web/img/portfolio/' 
+            namer: vich_uploader.namer_origname
+
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true

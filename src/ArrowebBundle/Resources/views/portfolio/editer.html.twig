@@ -8,6 +8,9 @@
 
 	{{ include("ArrowebBundle:portfolio:form.html.twig") }}
 
+	<p>{{ reference.picture.imageName }}</p>
+	<p><img src="{{ asset('img/portfolio/') }}{{ reference.picture.imageName }}" alt="" title="" /></p>
+
 
 {% endblock %}
 

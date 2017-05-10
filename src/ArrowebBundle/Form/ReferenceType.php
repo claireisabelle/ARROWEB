@@ -10,7 +10,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 
 
@@ -31,7 +30,7 @@ class ReferenceType extends AbstractType
                 ))
         ->add('url', TextType::class)
         ->add('annee', TextType::class)
-        ->add ('thumbnail', ThumbnailType::class)
+        ->add('picture', PictureType::class, array('required' => false))
         ->add('save', SubmitType::class, array('label' => 'Valider')
         );
 

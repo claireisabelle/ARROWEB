@@ -47,8 +47,9 @@ class PortfolioController extends Controller
 
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
         {
+            
+
             $em = $this->getDoctrine()->getManager();
-            $em->persist($reference->getThumbnail());
             $em->persist($reference);
             $em->flush();
 
@@ -121,7 +122,7 @@ class PortfolioController extends Controller
             return $this->redirectToRoute('dashboard');
         }
 
-        return $this->render('ArrowebBundle:portfolio:editer.html.twig', array('form' => $form->createView()));
+        return $this->render('ArrowebBundle:portfolio:editer.html.twig', array('reference' => $reference,'form' => $form->createView()));
 
     }
 

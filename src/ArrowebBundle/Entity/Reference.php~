@@ -3,7 +3,6 @@
 namespace ArrowebBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Reference
@@ -57,23 +56,20 @@ class Reference
      */
     private $annee;
 
-    /**
-     *
-     * @ORM\OneToMany(targetEntity="Image", mappedBy="reference")
-     */
-    private $images;
 
     /**
      *
      * 
-     * @ORM\OneToOne(targetEntity="Thumbnail", mappedBy="reference")
+     * @ORM\OneToOne(targetEntity="Thumbnail", inversedBy="reference", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(name="thumbnail_id", referencedColumnName="id")
      */
     private $thumbnail;
 
     /**
      *
      * 
-     * @ORM\OneToOne(targetEntity="Picture", mappedBy="reference", cascade={"persist"})
+     * @ORM\OneToOne(targetEntity="Picture", inversedBy="reference", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
      */
     private $picture;
 
@@ -207,47 +203,7 @@ class Reference
     {
         return $this->annee;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add image
-     *
-     * @param \ArrowebBundle\Entity\Image $image
-     *
-     * @return Reference
-     */
-    public function addImage(\ArrowebBundle\Entity\Image $image)
-    {
-        $this->images[] = $image;
-
-        return $this;
-    }
-
-    /**
-     * Remove image
-     *
-     * @param \ArrowebBundle\Entity\Image $image
-     */
-    public function removeImage(\ArrowebBundle\Entity\Image $image)
-    {
-        $this->images->removeElement($image);
-    }
-
-    /**
-     * Get images
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
+    
 
     /**
      * Set thumbnail
