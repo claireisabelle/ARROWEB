@@ -8,8 +8,12 @@
 
 	{{ include("ArrowebBundle:portfolio:form.html.twig") }}
 
-	<p>{{ reference.picture.imageName }}</p>
+	<h4><br />Images actuelles</h4>
+	<h5>Grande image</h5>
 	<p><img src="{{ asset('img/portfolio/') }}{{ reference.picture.imageName }}" alt="" title="" /></p>
+
+	<h5>Thumbnail</h5>
+	<p><img src="{{ asset('img/portfolio/') }}{{ reference.thumbnail.imageName }}" alt="" title="" /></p>
 
 
 {% endblock %}

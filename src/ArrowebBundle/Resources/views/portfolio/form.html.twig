@@ -32,6 +32,16 @@
 	      			{{ form_widget(form.annee, {'attr': {'class': 'form-control'}}) }}
 				</div><!-- /.form-group -->
 
+				<div class="form-group">
+					{{ form_label(form.picture, "Grande image", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.picture) }}
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					{{ form_label(form.thumbnail, "Thumbnail", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.thumbnail) }}
+				</div><!-- /.form-group -->
+
 				
 
 				{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}

@@ -31,6 +31,7 @@ class ReferenceType extends AbstractType
         ->add('url', TextType::class)
         ->add('annee', TextType::class)
         ->add('picture', PictureType::class, array('required' => false))
+        ->add('thumbnail', ThumbnailType::class, array('required' => false))
         ->add('save', SubmitType::class, array('label' => 'Valider')
         );
 

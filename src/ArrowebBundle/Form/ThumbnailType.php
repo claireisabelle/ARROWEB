@@ -16,7 +16,7 @@ class ThumbnailType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('file', FileType::class)
+        ->add('imageFile', FileType::class)
         ;
     }
     

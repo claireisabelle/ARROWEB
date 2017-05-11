@@ -19,7 +19,12 @@ class PortfolioController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('ArrowebBundle:portfolio:portfolio.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        // Récupération de toutes les références
+        $listeReferences = $em->getRepository('ArrowebBundle:Reference')->getReferences();
+
+        return $this->render('ArrowebBundle:portfolio:portfolio.html.twig', array('listeReferences' => $listeReferences));
     }
 
     /**
