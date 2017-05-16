@@ -5,6 +5,8 @@
  * 4 - Bandeau 1 (header)
  * 5 - Bandeau 2 (contenu)
  * 6 - Footer
+ * 7 - Portfolio
+ * 8 - Contact
  */
 
 
@@ -287,9 +289,7 @@ a.nav-link{
 	color: rgba(0,0,0,0.55) !important;
 }
 
-.portfolio{
-  padding-top: 40px;
-}
+
 
 
 
@@ -334,11 +334,23 @@ a.nav-link{
  *
  */
 
- .portfolio{
 
- }
+ .portfolio{
+  padding-top: 40px;
+}
 
  .portfolio .card {
   margin-right: 5px !important;
   margin-left: 5px !important;
 }
+
+/*
+ *
+ *
+ * 8 - CONTACT
+ *
+ */
+
+ .contact{
+  padding-top: 40px;
+ }

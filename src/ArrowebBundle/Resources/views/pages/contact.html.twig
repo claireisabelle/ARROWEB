@@ -1,0 +1,46 @@
+{% extends 'arroweb.html.twig' %}
+
+{% block title %}Devis pour la création d'un site Internet{% endblock %}
+
+
+{% block bandeau2 %}
+	<section class="contact">
+		<h1>Contact</h1>
+		<p>Pour tous vos projets web, je vous invite à me contacter.</p>
+		<p>Je me tiens à votre disposition pour échanger sur vos besoins et établir un devis.</p>
+
+		{% for message in app.session.flashbag.get('success') %}
+                <div class="alert alert-success" role="alert"><strong><i class="fa fa-check-square-o" aria-hidden="true"></i> {{ message }} </strong></div>
+        {% endfor %}
+
+		{{ form_start(form) }}
+
+			<div>
+				{{ form_widget(form.subject) }}
+				{{ form_errors(form.subject) }}
+			</div>
+			<div>
+				{{ form_widget(form.name) }}
+				{{ form_errors(form.name) }}
+			</div>
+			<div>
+				{{ form_widget(form.email) }}
+				{{ form_errors(form.email) }}
+			</div>
+			<div>
+				{{ form_widget(form.message) }}
+				{{ form_errors(form.message) }}
+			</div>
+
+			{# Render CSRF token etc .#}
+			<div style="display:none">
+				{{ form_rest(form) }}
+			</div>
+
+			<input type="submit" value="Submit">
+
+		{{ form_end(form) }}
+	</section>
+
+{% endblock %}
+
