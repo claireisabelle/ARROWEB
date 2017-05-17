@@ -23,6 +23,7 @@ body{
 
 p{
 	padding-bottom: 10px;
+  line-height: 1.65em;
 }
 
 h1{
@@ -30,6 +31,10 @@ h1{
 	font-size: 2.5em !important;
 	color: rgba(0,0,0,0.8);
 	padding-top: 25px;
+}
+
+.accueil{
+  color: rgb(53,53,53) !important;
 }
 
 .anim1 {
@@ -276,17 +281,25 @@ a.nav-link{
 	padding-bottom: 15px;
 }
 
+.bandeau2 h1{
+  color: #19619A;
+}
+
 .bandeau2 h2{
 	font-family: 'Roboto Condensed', sans-serif !important;
 	font-size: 1.8em !important;
-	color: rgba(0,0,0,0.75);
+	color: rgba(0,0,0,0.70);
 	padding-top: 15px;
 	padding-bottom: 10px;
 }
 
 .bandeau2 .chapeau{
 	font-size: 1.2em !important;
-	color: rgba(0,0,0,0.55) !important;
+	color: rgba(0,0,0,0.75) !important;
+}
+
+.bandeau2 p{
+  color: rgba(0,0,0,0.55);
 }
 
 
@@ -351,6 +364,40 @@ a.nav-link{
  *
  */
 
- .contact{
+ .contact h1{
   padding-top: 40px;
+ }
+
+ 
+
+ .contact form{
+  border: solid 1px #777777;
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+ }
+
+ .contact form ul{
+  list-style-type: none;
+  color: red;
+  font-weight: bold;
+  margin: 0px !important;
+  padding: 0px !important;
+  }
+
+  .coordonnee {
+    border-left: 5px solid #19619A;
+    padding-left: 15px !important;
+    margin-left: 0px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .coordonnee p{
+  padding-top: 5px !important;
+  padding-bottom: 0px !important;
+  margin: 0px !important;
+ }
+
+ .coordonnee a{
+  color: #19619A;
  }

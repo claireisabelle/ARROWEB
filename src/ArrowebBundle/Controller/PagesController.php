@@ -33,14 +33,14 @@ class PagesController extends Controller
             $data = $form->getData();
 
             $message = \Swift_Message::newInstance()
-            ->setSubject('Hello Email')
-            ->setFrom('send@example.com')
-            ->setTo('claire.bourdale@gmail.com')
+            ->setSubject('Formulaire posté depuis Arroweb')
+            ->setFrom('postmaster@arroweb.net')
+            ->setTo('claire@arroweb.net')
             ->setBody($this->renderView('Emails/registration.html.twig', array('data' => $data)), 'text/html');
 
             $this->get('mailer')->send($message);
 
-            $request->getSession()->getFlashBag()->add('success', 'Votre message a bien été envoyé.');
+            $request->getSession()->getFlashBag()->add('success', 'Je vous remercie pour votre message. Je vous réponds très vite !');
 
             return $this->redirectToRoute('contact');
         }

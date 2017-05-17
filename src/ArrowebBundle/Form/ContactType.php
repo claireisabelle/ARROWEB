@@ -16,25 +16,26 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class, array('attr' => array('placeholder' => 'Your name'),
+            ->add('name', TextType::class, array('attr' => array('placeholder' => 'Votre nom'), 
+                'required' => false,
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide your name")),
+                    new NotBlank(array("message" => "Merci de renseigner votre nom")),
                 )
             ))
-            ->add('subject', TextType::class, array('attr' => array('placeholder' => 'Subject'),
+            ->add('subject', TextType::class, array('attr' => array('placeholder' => 'Société ou organisme'), 'required' => false
+                
+            ))
+            ->add('email', EmailType::class, array('attr' => array('placeholder' => 'Votre adresse e-mail'),
+                'required' => false,
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please give a Subject")),
+                    new NotBlank(array("message" => "Merci de renseigner votre e-mail")),
+                    new Email(array("message" => "Votre e-mail semble ne pas être valide")),
                 )
             ))
-            ->add('email', EmailType::class, array('attr' => array('placeholder' => 'Your email address'),
+            ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Parlez moi de votre projet ou besoin'),
+                'required' => false,
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide a valid email")),
-                    new Email(array("message" => "Your email doesn't seems to be valid")),
-                )
-            ))
-            ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Your message here'),
-                'constraints' => array(
-                    new NotBlank(array("message" => "Please provide a message here")),
+                    new NotBlank(array("message" => "Merci de préciser votre message")),
                 )
             ))
         ;

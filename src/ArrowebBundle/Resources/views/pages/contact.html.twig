@@ -6,40 +6,65 @@
 {% block bandeau2 %}
 	<section class="contact">
 		<h1>Contact</h1>
-		<p>Pour tous vos projets web, je vous invite à me contacter.</p>
-		<p>Je me tiens à votre disposition pour échanger sur vos besoins et établir un devis.</p>
+		<p>Pour tous vos projets web, je vous invite à me contacter aux coordonnées ci-dessous ou via le formulaire ci-après.<br />Je me tiens à votre disposition pour échanger sur vos besoins et établir un devis.</p>
+
+		<section class="coordonnee">
+			<p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:claire@arroweb.net">claire@arroweb.net</a></p>
+			<p><i class="fa fa-phone" aria-hidden="true"></i> 06 86 45 98 17</p>
+			<p><i class="fa fa-map-marker" aria-hidden="true"></i> 14210 Baron sur Odon</p>
+		</section>
 
 		{% for message in app.session.flashbag.get('success') %}
                 <div class="alert alert-success" role="alert"><strong><i class="fa fa-check-square-o" aria-hidden="true"></i> {{ message }} </strong></div>
         {% endfor %}
 
-		{{ form_start(form) }}
+        <div class="row">
+			<div class="col-12 col-md-6">
 
-			<div>
-				{{ form_widget(form.subject) }}
-				{{ form_errors(form.subject) }}
-			</div>
-			<div>
-				{{ form_widget(form.name) }}
-				{{ form_errors(form.name) }}
-			</div>
-			<div>
-				{{ form_widget(form.email) }}
-				{{ form_errors(form.email) }}
-			</div>
-			<div>
-				{{ form_widget(form.message) }}
-				{{ form_errors(form.message) }}
-			</div>
 
-			{# Render CSRF token etc .#}
-			<div style="display:none">
-				{{ form_rest(form) }}
-			</div>
+				{{ form_start(form) }}
 
-			<input type="submit" value="Submit">
+					
+					<div class="form-group">
+						{{ form_label(form.name, "Votre nom*", {'label_attr': {'class': 'control-label'}}) }}
+						{{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+						{{ form_errors(form.name) }}
+					</div>
 
-		{{ form_end(form) }}
+					<div class="form-group">
+						{{ form_label(form.subject, "Votre société ou organisme (le cas échéant)", {'label_attr': {'class': 'control-label'}}) }}
+						{{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+						{{ form_errors(form.subject) }}
+					</div>
+
+					<div class="form-group">
+						{{ form_label(form.email, "Votre e-mail*", {'label_attr': {'class': 'control-label'}}) }}
+						{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+						{{ form_errors(form.email) }}
+					</div>
+
+					
+
+					<div class="form-group">
+						{{ form_label(form.message, "Votre message*", {'label_attr': {'class': 'control-label'}}) }}
+						{{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+						{{ form_errors(form.message) }}
+					</div>
+
+					{# Render CSRF token etc .#}
+					<div style="display:none">
+						{{ form_rest(form) }}
+					</div>
+
+					<input type="submit" value="Valider">
+					<p><em><br />*Champs obligatoires pour l'envoi du message</em></p>
+
+				{{ form_end(form) }}
+
+				
+
+			</div><!-- /.col -->
+		</div><!-- /.row -->
 	</section>
 
 {% endblock %}
