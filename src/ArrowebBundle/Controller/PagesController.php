@@ -21,6 +21,22 @@ class PagesController extends Controller
     }
 
     /**
+     * @Route("/questions-frequentes", name="questions")
+     */
+    public function questionsAction()
+    {
+        return $this->render('ArrowebBundle:pages:questions.html.twig');
+    }
+
+    /**
+     * @Route("/a-propos", name="about")
+     */
+    public function aboutAction()
+    {
+        return $this->render('ArrowebBundle:pages:a-propos.html.twig');
+    }
+
+    /**
      * @Route("/contact", name="contact")
      */
     public function contactAction(Request $request)
@@ -50,5 +66,13 @@ class PagesController extends Controller
         
         return $this->render('ArrowebBundle:pages:contact.html.twig', array('form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/mentions-legales", name="mentions")
+     */
+    public function mentionsAction()
+    {
+        return $this->render('ArrowebBundle:pages:mentions-legales.html.twig');
     }
 }

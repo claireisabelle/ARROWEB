@@ -302,6 +302,11 @@ a.nav-link{
   color: rgba(0,0,0,0.55);
 }
 
+.bandeau2 li{
+  color: rgba(0,0,0,0.65);
+  padding-bottom: 5px !important;
+}
+
 
 
 
@@ -337,6 +342,11 @@ a.nav-link{
 	color: rgba(255,255,255, 0.7) !important;
 }
 
+.footer .fa{
+  padding-right: 3px !important;
+  padding-left: 3px !important;
+  color: rgba(255,255,255, 0.7) !important;
+}
 
 
 
@@ -363,6 +373,10 @@ a.nav-link{
  * 8 - CONTACT
  *
  */
+ 
+ #accordion{
+  margin-bottom: 20px !important;
+ }
 
  .contact h1{
   padding-top: 40px;

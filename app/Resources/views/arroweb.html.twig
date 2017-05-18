@@ -65,13 +65,13 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ path('portfolio') }}">Portfolio</a>
+                  <a class="nav-link {% if app.request.get('_route') == 'portfolio' %} active {% endif %}" href="{{ path('portfolio') }}">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Questions</a>
+                  <a class="nav-link {% if app.request.get('_route') == 'questions' %} active {% endif %}" href="{{ path('questions') }}">Questions</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">A propos</a>
+                  <a class="nav-link {% if app.request.get('_route') == 'about' %} active {% endif %}" href="{{ path('about') }}">A propos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link {% if app.request.get('_route') == 'contact' %} active {% endif %}" href="{{ path('contact') }}">Contact</a>
@@ -100,10 +100,10 @@
                         <ul>
                             <li><a href="{{ path('homepage') }}">Accueil</a></li>
                             <li><a href="{{ path('portfolio') }}">Portfolio</a></li>
-                            <li><a href="">Questions</a></li>
-                            <li><a href="">A propos</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li><a href="">Mentions légales</a></li>
+                            <li><a href="{{ path('questions') }}">Questions</a></li>
+                            <li><a href="{{ path('about') }}">A propos</a></li>
+                            <li><a href="{{ path('contact') }}">Contact</a></li>
+                            <li><a href="{{ path('mentions') }}">Mentions légales</a></li>
                         </ul>
                     </div><!-- /.col -->
                     <div class="col-12 col-md-4">
@@ -119,8 +119,15 @@
                     <div class="col-12 col-md-4">
                         <p class="text-center"><img src="{{ asset('img/logo-blanc.png') }}" alt="" title="" /><br />
                         Conception de site Internet<br />
-                        <em>Accompagnement &amp; développement</em></p>
-                        <p class="text-center">Caen - Normandie</p>
+                        Accompagnement &amp; développement<br />
+                        Caen - Normandie<br />
+                        <em>SIREN n°513 932 137</em></p>
+                        <p class="text-center">
+                        <a href="https://www.facebook.com/arrowebCaen/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/clairebourdale" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://www.arrosport.com" target="_blank"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
+
+                        </p>
                     </div><!-- /.col -->
                 </div><!-- ./row -->
             </div><!-- /.container -->

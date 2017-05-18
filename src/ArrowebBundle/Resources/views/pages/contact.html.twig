@@ -8,18 +8,26 @@
 		<h1>Contact</h1>
 		<p>Pour tous vos projets web, je vous invite à me contacter aux coordonnées ci-dessous ou via le formulaire ci-après.<br />Je me tiens à votre disposition pour échanger sur vos besoins et établir un devis.</p>
 
-		<section class="coordonnee">
-			<p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:claire@arroweb.net">claire@arroweb.net</a></p>
-			<p><i class="fa fa-phone" aria-hidden="true"></i> 06 86 45 98 17</p>
-			<p><i class="fa fa-map-marker" aria-hidden="true"></i> 14210 Baron sur Odon</p>
-		</section>
+		<div class="row">
 
-		{% for message in app.session.flashbag.get('success') %}
-                <div class="alert alert-success" role="alert"><strong><i class="fa fa-check-square-o" aria-hidden="true"></i> {{ message }} </strong></div>
-        {% endfor %}
+			<div class="col-12 col-md-4">
 
-        <div class="row">
-			<div class="col-12 col-md-6">
+				<section class="coordonnee">
+					<p><strong>Claire Bourdalé</strong></p>
+					<p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:claire@arroweb.net">claire@arroweb.net</a></p>
+					<p><i class="fa fa-phone" aria-hidden="true"></i> 06 86 45 98 17</p>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i> 14210 Baron sur Odon</p>
+					<p><i class="fa fa-facebook" aria-hidden="true"></i> <a href="https://www.facebook.com/arrowebCaen/" target="_blank">@arrowebCaen</a></p>
+					<p><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/clairebourdale" target="_blank">@clairebourdale</a></p>
+				</section>
+
+				{% for message in app.session.flashbag.get('success') %}
+		                <div class="alert alert-success" role="alert"><strong><i class="fa fa-check-square-o" aria-hidden="true"></i> {{ message }} </strong></div>
+		        {% endfor %}
+
+		    </div><!-- /.col -->
+
+        	<div class="col-12 col-md-8">
 
 
 				{{ form_start(form) }}
