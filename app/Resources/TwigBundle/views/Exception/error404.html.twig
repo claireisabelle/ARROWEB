@@ -1,0 +1,27 @@
+{% extends 'arroweb.html.twig' %}
+
+{% block title %}Oups... Erreur {{ status_code }}{% endblock %}
+
+
+{% block bandeau2 %}
+	<section class="contact">
+		<div class="row">
+
+			<div class="col-12 col-md-2">
+				<p class="text-center"><img src="{{ asset('img/erreur.png') }}" class="img-fluid" alt="" title="" /></p>
+			</div><!-- /.col -->
+			<div class="col-12 col-md-10">
+				<h1>Petit problème</h1>
+				<p>Il semblerait que la page que vous cherchez n'existe pas... Ce n'est pas bien grave : vous pouvez retrouver votre chemin en utilisant le menu du site en haut ou en bas <i class="fa fa-smile-o" aria-hidden="true"></i>
+				</p>
+				<p>Erreur {{ status_code }} -  "{{ status_text }}"</p>
+			</div>
+
+			
+		</div>
+
+		
+	</section>
+
+{% endblock %}
+

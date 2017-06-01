@@ -37,7 +37,7 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/contact-arroweb", name="contact")
      */
     public function contactAction(Request $request)
     {
