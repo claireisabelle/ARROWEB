@@ -1,12 +1,13 @@
 {% extends 'arroweb.html.twig' %}
 
-{% block title %}Devis pour la création d'un site Internet{% endblock %}
+{% block title %}Devis pour la création d'un site Internet professionnel{% endblock %}
 
 
 {% block bandeau2 %}
 	<section class="contact">
 		<h1>Contact</h1>
 		<p>Pour tous vos projets web, je vous invite à me contacter aux coordonnées ci-dessous ou via le formulaire ci-après.<br />Je me tiens à votre disposition pour échanger sur vos besoins et établir un devis.</p>
+		<p>Installée sur la région de Caen, je me déplace sur toute la Normandie et la Bretagne.</p>
 
 		<div class="row">
 
@@ -66,7 +67,8 @@
 					</div>
 
 					<input type="submit" value="Valider">
-					<p><em><br />*Champs obligatoires pour l'envoi du message</em></p>
+					<p><em><br />*Champs obligatoires pour l'envoi du message<br />
+					Protection de vos données personnelles : <a href="{{ path('protection') }}">cliquez ici</a></em></p>
 
 				{{ form_end(form) }}
 

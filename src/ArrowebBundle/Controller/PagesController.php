@@ -29,7 +29,7 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/a-propos", name="about")
+     * @Route("/webmaster-freelance-caen", name="about")
      */
     public function aboutAction()
     {
@@ -74,5 +74,13 @@ class PagesController extends Controller
     public function mentionsAction()
     {
         return $this->render('ArrowebBundle:pages:mentions-legales.html.twig');
+    }
+
+    /**
+     * @Route("/protection-donnees", name="protection")
+     */
+    public function protectionAction()
+    {
+        return $this->render('ArrowebBundle:pages:politique-confidentialite.html.twig');
     }
 }
